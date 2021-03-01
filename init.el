@@ -1,3 +1,20 @@
+
+;; writeroom-mode auto run
+;;(eval-after-load 'writeroom-mode
+;;  '(defun turn-on-writeroom-mode ()
+;;     "Turn on `writeroom-mode'.
+;;This function activates `writeroom-mode' in a buffer if that
+;;buffer's major mode is a member of `writeroom-major-modes',
+;;or derived from one of those modes.
+
+;;If `writeroom-major-modes' is nil, activate `writeroom-mode'
+;;in ALL buffers."
+;;     (when (or (not writeroom-major-modes)
+;;               (apply 'derived-mode-p writeroom-major-modes))
+;;       (writeroom-mode 1))))
+
+(global-writeroom-mode 1)
+
 ;; chez scheme programming settings
 
 (setq geiser-mode-start-repl-p t)
@@ -29,7 +46,8 @@
 ;;
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((scheme . t)))
+ '((scheme . t)
+   (python . t)))
 
 (add-hook 'scheme-mode-hook 'geiser-mode)
 (setq geiser-default-implementation 'racket)
@@ -136,7 +154,7 @@
  '(nrepl-message-colors
    '("#dc322f" "#cb4b16" "#b58900" "#5b7300" "#b3c34d" "#0061a8" "#2aa198" "#d33682" "#6c71c4"))
  '(package-selected-packages
-   '(darkburn-theme github-modern-theme github-theme spacemacs-theme nord-theme solarized-theme almost-mono-themes firecode-theme berrys-theme badger-theme markdown-preview-mode quelpa zmq simple-httpd websocket writeroom-mode racket-mode mpv pdf-view-restore markdown-mode+ powerline-evil w3m elfeed org-bullets brutalist-theme powershell dracula-theme company geiser doom-themes doom-modeline powerline cnfonts tao-yin-theme tao-theme))
+   '(pyim darkburn-theme spacemacs-theme nord-theme almost-mono-themes firecode-theme berrys-theme badger-theme markdown-preview-mode quelpa zmq simple-httpd websocket writeroom-mode racket-mode mpv pdf-view-restore markdown-mode+ powerline-evil w3m elfeed org-bullets brutalist-theme powershell dracula-theme company geiser doom-themes doom-modeline powerline cnfonts tao-yin-theme))
  '(pdf-view-midnight-colors '("#b2b2b2" . "#292b2e"))
  '(pos-tip-background-color "#eee8d5")
  '(pos-tip-foreground-color "#586e75")
@@ -187,3 +205,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'upcase-region 'disabled nil)
