@@ -17,7 +17,7 @@
 ;;(global-writeroom-mode 1)
 (setq writeroom-fullscreen-effect nil)
 
-;;
+;;chez scheme and geiser mode
 (setq geiser-mode-start-repl-p t)
 (add-to-list 'exec-path "/usr/local/bin")
 (setq geiser-active-implementations '(chez))
