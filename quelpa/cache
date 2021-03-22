@@ -1,1 +1,0 @@
-((eaf :fetcher github :repo "manateelazycat/emacs-application-framework" :files ("*")))
