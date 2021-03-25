@@ -1,6 +1,8 @@
 
-(setq-default line-spacing 0.15)
-;;
+;; line space
+(setq-default line-spacing 0.15) 
+
+;; scheme company 
 (require 'company)
 (add-hook 'scheme-mode-hook
           (lambda ()
@@ -14,17 +16,21 @@
 (require 'nano)
 
 ;; writeroom settings
-;;(global-writeroom-mode 1)
 (setq writeroom-fullscreen-effect nil)
+(add-hook 'writer-mode-hook
+          (lambda ()
+            (writeroom-mode 1)))
 
-;;chez scheme and geiser mode
+;; scheme programming
 (setq geiser-mode-start-repl-p t)
 (add-to-list 'exec-path "/usr/local/bin")
 (setq geiser-active-implementations '(chez))
 
 ;;org-mode settings
 (require 'org-bullets)
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(add-hook 'org-mode-hook
+          (lambda ()
+            (org-bullets-mode 1)))
 
 ;; plugin source
 (setq package-archives '(("gnu"   . "http://mirrors.cloud.tencent.com/elpa/gnu/")
@@ -35,6 +41,7 @@
 (tool-bar-mode -1)
 ;; close scroll-bar
 (scroll-bar-mode -1)
+;; cursor 
 (setq-default cursor-type '(bar . 4))
 
 ;; font settings
@@ -58,7 +65,7 @@
  '(cua-normal-cursor-color "#a89984")
  '(cua-overwrite-cursor-color "#d79921")
  '(cua-read-only-cursor-color "#98971a")
- '(custom-enabled-themes '(dichromacy))
+ '(custom-enabled-themes nil)
  '(custom-safe-themes
    '("00445e6f15d31e9afaa23ed0d765850e9cd5e929be5e8e63b114a3346236c44c" "830877f4aab227556548dc0a28bf395d0abe0e3a0ab95455731c9ea5ab5fe4e1" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "57e3f215bef8784157991c4957965aa31bac935aca011b29d7d8e113a652b693" "db7f422324a763cfdea47abf0f931461d1493f2ecf8b42be87bbbbbabf287bfe" "c3c39b9bf9824d4fa591fbf785a2cb507607f2f36fef05363d6f2dca5c6db82b" default))
  '(fci-rule-color "#32302f")
@@ -86,7 +93,7 @@
  '(nrepl-message-colors
    '("#fb4933" "#d65d0e" "#d79921" "#747400" "#b9b340" "#14676b" "#689d6a" "#d3869b" "#b16286"))
  '(package-selected-packages
-   '(markdown-preview-mode powershell company ac-geiser auto-complete geiser afternoon-theme solarized-theme underwater-theme markdown-mode berrys-theme writeroom-mode))
+   '(counsel markdown-preview-mode powershell company ac-geiser auto-complete geiser afternoon-theme solarized-theme underwater-theme markdown-mode berrys-theme writeroom-mode))
  '(pos-tip-background-color "#32302f")
  '(pos-tip-foreground-color "#bdae93")
  '(smartrep-mode-line-active-bg (solarized-color-blend "#98971a" "#32302f" 0.2))
@@ -116,6 +123,7 @@
  '(vc-annotate-very-old-color nil)
  '(weechat-color-list
    '(unspecified "#282828" "#32302f" "#b21b0a" "#fb4933" "#747400" "#98971a" "#a76e00" "#d79921" "#14676b" "#458588" "#9f4d64" "#d3869b" "#2e7d33" "#689d6a" "#a89984" "#282828"))
+ '(writeroom-mode-line t)
  '(xterm-color-names
    ["#32302f" "#fb4933" "#98971a" "#d79921" "#458588" "#d3869b" "#689d6a" "#a89984"])
  '(xterm-color-names-bright
