@@ -1,3 +1,10 @@
+;; insert css code when editing org files
+(defun org-style ()
+  (interactive)
+  (insert "#+HTML_HEAD: <link rel='stylesheet' type='text/css' href='C:/Users/lu/AppData/Roaming/.emacs.d/org.css'/>"))
+
+;; org-mode scale
+(setq cnfonts-use-face-font-rescale t)
 
 ;; line space
 (setq-default line-spacing 0.15) 
