@@ -2,16 +2,22 @@
 (defun org-style ()
   (interactive)
   (insert "#+HTML_HEAD: <link rel='stylesheet' type='text/css' href='C:/Users/lu/AppData/Roaming/.emacs.d/org.css'/>"))
+(defun org-author ()
+  (interactive)
+  (insert "#+author:Lu ZhiYuan"))
 
 ;; org-mode scale
 (setq cnfonts-use-face-font-rescale t)
 
 ;; line space
-(setq-default line-spacing 0.15) 
+;; (setq-default line-spacing 0.15)
 
-;; scheme company 
+;; company settings
 (require 'company)
 (add-hook 'scheme-mode-hook
+          (lambda ()
+            (company-mode 1)))
+(add-hook 'lisp-interaction-mode-hook
           (lambda ()
             (company-mode 1)))
 
@@ -23,6 +29,7 @@
 (require 'nano)
 
 ;; writeroom settings
+;;(global-writeroom-mode 1)
 (setq writeroom-fullscreen-effect nil)
 (add-hook 'writer-mode-hook
           (lambda ()
@@ -34,10 +41,10 @@
 (setq geiser-active-implementations '(chez))
 
 ;;org-mode settings
-(require 'org-bullets)
-(add-hook 'org-mode-hook
-          (lambda ()
-            (org-bullets-mode 1)))
+;;(require 'org-bullets)
+;;(add-hook 'org-mode-hook
+;;          (lambda ()
+;;            (org-bullets-mode 1)))
 
 ;; plugin source
 (setq package-archives '(("gnu"   . "http://mirrors.cloud.tencent.com/elpa/gnu/")
@@ -48,6 +55,7 @@
 (tool-bar-mode -1)
 ;; close scroll-bar
 (scroll-bar-mode -1)
+(menu-bar-mode 0)
 ;; cursor 
 (setq-default cursor-type '(bar . 4))
 
@@ -57,6 +65,10 @@
 
 (setq inhibit-splash-screen t)
 (global-visual-line-mode 1)
+
+;; Setup Unicode fonts
+(require 'unicode-fonts)
+(unicode-fonts-setup)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -100,7 +112,7 @@
  '(nrepl-message-colors
    '("#fb4933" "#d65d0e" "#d79921" "#747400" "#b9b340" "#14676b" "#689d6a" "#d3869b" "#b16286"))
  '(package-selected-packages
-   '(counsel markdown-preview-mode powershell company ac-geiser auto-complete geiser afternoon-theme solarized-theme underwater-theme markdown-mode berrys-theme writeroom-mode))
+   '(epc deferred unicode-fonts counsel markdown-preview-mode powershell company ac-geiser auto-complete geiser afternoon-theme solarized-theme underwater-theme markdown-mode berrys-theme writeroom-mode))
  '(pos-tip-background-color "#32302f")
  '(pos-tip-foreground-color "#bdae93")
  '(smartrep-mode-line-active-bg (solarized-color-blend "#98971a" "#32302f" 0.2))
