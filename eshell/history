@@ -1,0 +1,34 @@
+ls
+ls -la
+cd 桌面
+ls
+clear
+ls
+clear
+cd ..
+ls -la
+clear
+sudo apt update
+sudo apt upgrade
+ls
+clear
+emacs
+clear
+ls
+ls -l
+ls -l
+ls
+clear
+ls
+mkdir res
+ls
+cp Screenshot\ from\ 2021-04-10\ 14-50-49.png  res
+ls
+cd res/
+ls
+cd ..
+ls
+clear
+rm Screenshot\ from\ 2021-04-10\ 14-50-49.png 
+ls
+clear

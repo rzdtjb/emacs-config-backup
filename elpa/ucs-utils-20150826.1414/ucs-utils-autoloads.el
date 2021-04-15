@@ -227,9 +227,11 @@ The following aliases will be installed:
     `ucs-intact-string'         for   `ucs-utils-intact-string'
     `ucs-vector'                for   `ucs-utils-vector'
     `ucs-pretty-name'           for   `ucs-utils-pretty-name'
-    `ucs-eval'                  for   `ucs-utils-eval'" t nil)
+    `ucs-eval'                  for   `ucs-utils-eval'
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ucs-utils" '("character-name-history" "persistent-soft" "ucs-utils-")))
+\(fn)" t nil)
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ucs-utils" '("ucs-utils-" "persistent-soft" "character-name-history")))
 
 ;;;***
 

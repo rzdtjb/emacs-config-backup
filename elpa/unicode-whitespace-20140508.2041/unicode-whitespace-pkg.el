@@ -1,0 +1,2 @@
+;;; Generated package description from unicode-whitespace.el  -*- no-byte-compile: t -*-
+(define-package "unicode-whitespace" "20140508.2041" "teach whitespace-mode about fancy characters" '((ucs-utils "0.7.6") (list-utils "0.4.2") (persistent-soft "0.8.8") (pcache "0.2.3")) :commit "a18c6b38d78b94f2eb1dcc4cb4fa91b6a17efabe" :authors '(("Roland Walker" . "walker@pobox.com")) :maintainer '("Roland Walker" . "walker@pobox.com") :keywords '("faces" "wp" "interface") :url "http://github.com/rolandwalker/unicode-whitespace")

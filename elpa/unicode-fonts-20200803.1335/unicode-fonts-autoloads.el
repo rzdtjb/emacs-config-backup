@@ -58,7 +58,7 @@ and regenerated.
 
 \(fn &optional FONTSET-NAMES REGENERATE)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "unicode-fonts" '("persistent-softest-" "unicode-")))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "unicode-fonts" '("unicode-" "persistent-softest-")))
 
 ;;;***
 
